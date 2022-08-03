@@ -31,6 +31,7 @@ core-interoperation = { path = "../interoperation" }
 protocol = { path = "../../protocol", package = "axon-protocol" }
 
 [dev-dependencies]
+bytemuck = "1.11"
 ckb-jsonrpc-types = "0.104"
 common-crypto = { path = "../../common/crypto" }
 core-cross-client = { path = "../cross-client" }
@@ -45,6 +46,9 @@ ethabi-derive = { git = "https://github.com/rust-ethereum/ethabi.git", rev = "7e
 ethers-contract = "0.17"
 ethers-core = "0.17"
 getrandom = "0.2"
+revm = "1.8"
+hashbrown = "0.12"
+rand7 = {package = "rand", version = "0.7"}
 rlp = "0.5"
 serde_json = "1.0"
 tempfile = "3.3"
@@ -52,3 +56,7 @@ tempfile = "3.3"
 [[bench]]
 harness = false
 name = "bench_transfer"
+
+[[bench]]
+harness = false
+name = "bench"
